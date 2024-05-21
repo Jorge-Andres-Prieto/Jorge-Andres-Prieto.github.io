@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrés Jiménez - Desarrollador de Software</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background: linear-gradient(to right, #e0eafc, #cfdef3);
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         nav {
             text-align: center;
@@ -27,27 +32,33 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 16px;
+            transition: color 0.3s;
         }
         nav a:hover {
             color: #ffdd00;
         }
-        section {
+        main {
+            flex: 1;
             padding: 20px;
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px auto;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        main:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            text-align: center;
+            color: #007bff;
         }
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -4px 2px -2px gray;
         }
         .buy-coffee button {
             background-color: #007bff;
@@ -57,33 +68,65 @@
             cursor: pointer;
             border-radius: 5px;
             font-size: 16px;
+            transition: background-color 0.3s;
         }
         .buy-coffee button:hover {
             background-color: #0056b3;
         }
         .project {
             margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
         .project a {
             color: #007bff;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
         }
         .project a:hover {
+            color: #0056b3;
             text-decoration: underline;
         }
         .technologies img {
             margin: 5px;
             border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .technologies img:hover {
+            transform: scale(1.1);
         }
         .contact-icons img {
             margin: 10px;
             border-radius: 50%;
             width: 50px;
             height: 50px;
-            transition: transform 0.2s;
+            transition: transform 0.3s;
         }
         .contact-icons img:hover {
             transform: scale(1.1);
+        }
+        .about h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .about p {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -95,109 +138,111 @@
         <a href="#buy-coffee">Buy me a Coffee</a>
         <a href="#contact">Contacto</a>
     </nav>
-    <section id="about" class="about">
-        <h1>Andrés Jiménez</h1>
-        <p>Desarrollador de Software</p>
-        <h2>Sobre mí</h2>
-        <p>Soy estudiante de Ingeniería de Sistemas en la Universidad Nacional. Tengo un fuerte interés en análisis de datos y me apasiona utilizar la tecnología para resolver problemas y mejorar la eficiencia. Además, tengo experiencia en el uso de la API de OpenAI para desarrollar aplicaciones con inteligencia artificial.</p>
-    </section>
-    <section id="portfolio" class="portfolio">
-        <h2>Portafolio</h2>
-        <div class="project">
-            <h3>🤖 Nacho Bot</h3>
-            <p>Un chat bot que funciona con la API de OpenAI para resolver preguntas asociadas a la Universidad Nacional sede Medellín.</p>
-            <p><a href="https://nachobot.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Nacho_Bot">Repositorio</a></p>
-        </div>
-        <div class="project">
-            <h3>🗣️ UNalBot</h3>
-            <p>UNalBot es un chatbot diseñado y creado por mí, un estudiante de la Universidad Nacional de Colombia, el bot está hecho para servir como un asistente virtual dentro de la misma universidad.</p>
-            <p><a href="https://chatbot-un-e3y6wrkckde9tqvuknapp3u.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Chat_Bot">Repositorio</a></p>
-        </div>
-        <div class="project">
-            <h3>🔍 Motor de Búsqueda</h3>
-            <p>Aplicación web que permite a los usuarios buscar empresas por nombre en un conjunto de datos de empresas colombianas.</p>
-            <p><a href="https://motorbusqueda-b7vqjan3gqwfogzshn8dr.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Motor_busqueda">Repositorio</a></p>
-        </div>
-        <div class="project">
-            <h3>💹 Simulador de Inversiones</h3>
-            <p>Esta aplicación permite a los usuarios simular el crecimiento de una inversión a lo largo del tiempo.</p>
-            <p><a href="https://simulador-de-inversiones-2v5pajvufmgvfgwah7r89r.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Simulador-de-Inversiones">Repositorio</a></p>
-        </div>
-        <div class="project">
-            <h3>📊 Análisis de Datos</h3>
-            <p>Analiza un conjunto de datos de empresas colombianas para obtener información sobre su estado, municipio, rango de empleados y otras características relevantes.</p>
-            <p><a href="https://data543njfdkmc8qsqcggrjk3.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Analisis_Datos">Repositorio</a></p>
-        </div>
-        <div class="project">
-            <h3>🛠️ Control Total</h3>
-            <p>El proyecto <strong>Control Total</strong> es un sistema de inventario y ventas desarrollado con:</p>
+    <main>
+        <section id="about" class="about">
+            <h1>Andrés Jiménez</h1>
+            <p>Desarrollador de Software</p>
+            <h2>Sobre mí</h2>
+            <p>Soy estudiante de Ingeniería de Sistemas en la Universidad Nacional. Tengo un fuerte interés en análisis de datos y me apasiona utilizar la tecnología para resolver problemas y mejorar la eficiencia. Además, tengo experiencia en el uso de la API de OpenAI para desarrollar aplicaciones con inteligencia artificial.</p>
+        </section>
+        <section id="portfolio" class="portfolio">
+            <h2>Portafolio</h2>
+            <div class="project">
+                <h3>🤖 Nacho Bot</h3>
+                <p>Un chat bot que funciona con la API de OpenAI para resolver preguntas asociadas a la Universidad Nacional sede Medellín.</p>
+                <p><a href="https://nachobot.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Nacho_Bot">Repositorio</a></p>
+            </div>
+            <div class="project">
+                <h3>🗣️ UNalBot</h3>
+                <p>UNalBot es un chatbot diseñado y creado por mí, un estudiante de la Universidad Nacional de Colombia, el bot está hecho para servir como un asistente virtual dentro de la misma universidad.</p>
+                <p><a href="https://chatbot-un-e3y6wrkckde9tqvuknapp3u.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Chat_Bot">Repositorio</a></p>
+            </div>
+            <div class="project">
+                <h3>🔍 Motor de Búsqueda</h3>
+                <p>Aplicación web que permite a los usuarios buscar empresas por nombre en un conjunto de datos de empresas colombianas.</p>
+                <p><a href="https://motorbusqueda-b7vqjan3gqwfogzshn8dr.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Motor_busqueda">Repositorio</a></p>
+            </div>
+            <div class="project">
+                <h3>💹 Simulador de Inversiones</h3>
+                <p>Esta aplicación permite a los usuarios simular el crecimiento de una inversión a lo largo del tiempo.</p>
+                <p><a href="https://simulador-de-inversiones-2v5pajvufmgvfgwah7r89r.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Simulador-de-Inversiones">Repositorio</a></p>
+            </div>
+            <div class="project">
+                <h3>📊 Análisis de Datos</h3>
+                <p>Analiza un conjunto de datos de empresas colombianas para obtener información sobre su estado, municipio, rango de empleados y otras características relevantes.</p>
+                <p><a href="https://data543njfdkmc8qsqcggrjk3.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Analisis_Datos">Repositorio</a></p>
+            </div>
+            <div class="project">
+                <h3>🛠️ Control Total</h3>
+                <p>El proyecto <strong>Control Total</strong> es un sistema de inventario y ventas desarrollado con:</p>
+                <p>
+                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+                    <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+                    <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
+                    <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy"/>
+                    <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
+                    <img src="https://img.shields.io/badge/Matplotlib-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Matplotlib"/>
+                    <img src="https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white" alt="SciPy"/>
+                    <img src="https://img.shields.io/badge/GeoPandas-1B1B1B?style=for-the-badge&logo=geopandas&logoColor=white" alt="GeoPandas"/>
+                </p>
+                <p>Esta aplicación permite a los pequeños y medianos negocios gestionar eficazmente sus productos, ventas y clientes. La app incluye:</p>
+                <ul>
+                    <li>Logueo con indicación de la tienda desde la que se está ingresando.</li>
+                    <li>Políticas de tratamiento de datos.</li>
+                    <li>Gestión de usuarios.</li>
+                    <li>Ventas y facturación.</li>
+                    <li>Gestión de clientes para permitir créditos.</li>
+                    <li>Gestión de inventarios.</li>
+                    <li>Análisis estadísticos como ventas diarias, métodos de pago, cuadre de caja, estadísticas descriptivas y pruebas de hipótesis.</li>
+                    <li>Gestión de entregas para domicilios.</li>
+                </ul>
+                <p><a href="https://controltotal.streamlit.app/">Aplicación</a></p>
+            </div>
+        </section>
+        <section id="technologies" class="technologies">
+            <h2>Tecnologías</h2>
+            <p>Estas son las tecnologías que sé usar para backend y análisis de datos:</p>
             <p>
                 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-                <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
-                <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
                 <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy"/>
                 <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
                 <img src="https://img.shields.io/badge/Matplotlib-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Matplotlib"/>
-                <img src="https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white" alt="SciPy"/>
-                <img src="https://img.shields.io/badge/GeoPandas-1B1B1B?style=for-the-badge&logo=geopandas&logoColor=white" alt="GeoPandas"/>
             </p>
-            <p>Esta aplicación permite a los pequeños y medianos negocios gestionar eficazmente sus productos, ventas y clientes. La app incluye:</p>
-            <ul>
-                <li>Logueo con indicación de la tienda desde la que se está ingresando.</li>
-                <li>Políticas de tratamiento de datos.</li>
-                <li>Gestión de usuarios.</li>
-                <li>Ventas y facturación.</li>
-                <li>Gestión de clientes para permitir créditos.</li>
-                <li>Gestión de inventarios.</li>
-                <li>Análisis estadísticos como ventas diarias, métodos de pago, cuadre de caja, estadísticas descriptivas y pruebas de hipótesis.</li>
-                <li>Gestión de entregas para domicilios.</li>
-            </ul>
-            <p><a href="https://controltotal.streamlit.app/">Aplicación</a></p>
-        </div>
-    </section>
-    <section id="technologies" class="technologies">
-        <h2>Tecnologías</h2>
-        <p>Estas son las tecnologías que sé usar para backend y análisis de datos:</p>
-        <p>
-            <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-            <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy"/>
-            <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
-            <img src="https://img.shields.io/badge/Matplotlib-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Matplotlib"/>
-        </p>
-        <p>Estas son las tecnologías que sé usar para bases de datos:</p>
-        <p>
-            <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
-            <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
-            <img src="https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white" alt="SQL Server"/>
-        </p>
-        <p>Estas son las tecnologías que sé usar para desarrollo web e inteligencia artificial:</p>
-        <p>
-            <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
-            <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI"/>
-        </p>
-    </section>
-    <section id="buy-coffee" class="buy-coffee">
-        <h2>Buy me a Coffee</h2>
-        <p>Si te gusta mi trabajo y deseas apoyarme, considera invitarme a un café. Esto me ayudará a seguir creando proyectos y soluciones innovadoras. ¡Gracias por tu apoyo!</p>
-        <p>
-            <a href="https://www.buymeacoffee.com/Andres.Jimenez">
-                <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee"/>
-            </a>
-        </p>
-    </section>
-    <section id="contact" class="contact">
-        <h2>Contacto</h2>
-        <p>Puedes contactarme a través de los siguientes medios:</p>
-        <p class="contact-icons">
-            <a href="https://www.linkedin.com/in/jorge-prieto-b36ab2250/"><img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG37.png" alt="LinkedIn"></a>
-            <a href="https://www.fiverr.com/andres__jimenez?public_mode=true"><img src="https://freelogopng.com/images/all_img/1656738600fiverr-app-logo.png" alt="Fiverr"></a>
-            <a href="https://www.upwork.com/freelancers/~0142bd1ae6229261b5"><img src="https://w7.pngwing.com/pngs/80/704/png-transparent-upwork-hd-logo-thumbnail.png" alt="Upwork"></a>
-            <a href="https://github.com/Jorge-Andres-Prieto"><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/github-512.png" alt="GitHub"></a>
-            <a href="https://www.reddit.com/user/Flestar/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"><img src="https://logodownload.org/wp-content/uploads/2018/02/reddit-logo-16.png" alt="Reddit"></a>
-            <a href="https://www.peopleperhour.com/freelancer/andres-jimenez-freelance-python-developer-zzyynamz"><img src="https://cufinder.io/_next/image?url=https%3A%2F%2Fcufinder.io%2Fimages%2Fmarketing-logos%2Fpeopleperhour.com.png&w=640&q=75" alt="People Per Hour"></a>
-            <a href="https://stackoverflow.com/users/24101727/jorge-prieto"><img src="https://www.logo.wine/a/logo/Stack_Overflow/Stack_Overflow-Icon-Logo.wine.svg" alt="Stack Overflow"></a>
-        </p>
-    </section>
+            <p>Estas son las tecnologías que sé usar para bases de datos:</p>
+            <p>
+                <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
+                <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+                <img src="https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white" alt="SQL Server"/>
+            </p>
+            <p>Estas son las tecnologías que sé usar para desarrollo web e inteligencia artificial:</p>
+            <p>
+                <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
+                <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI"/>
+            </p>
+        </section>
+        <section id="buy-coffee" class="buy-coffee">
+            <h2>Buy me a Coffee</h2>
+            <p>Si te gusta mi trabajo y deseas apoyarme, considera invitarme a un café. Esto me ayudará a seguir creando proyectos y soluciones innovadoras. ¡Gracias por tu apoyo!</p>
+            <p>
+                <a href="https://www.buymeacoffee.com/Andres.Jimenez">
+                    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee"/>
+                </a>
+            </p>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contacto</h2>
+            <p>Puedes contactarme a través de los siguientes medios:</p>
+            <p class="contact-icons">
+                <a href="https://www.linkedin.com/in/jorge-prieto-b36ab2250/"><img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG37.png" alt="LinkedIn"></a>
+                <a href="https://www.fiverr.com/andres__jimenez?public_mode=true"><img src="https://freelogopng.com/images/all_img/1656738600fiverr-app-logo.png" alt="Fiverr"></a>
+                <a href="https://www.upwork.com/freelancers/~0142bd1ae6229261b5"><img src="https://w7.pngwing.com/pngs/80/704/png-transparent-upwork-hd-logo-thumbnail.png" alt="Upwork"></a>
+                <a href="https://github.com/Jorge-Andres-Prieto"><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/github-512.png" alt="GitHub"></a>
+                <a href="https://www.reddit.com/user/Flestar/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"><img src="https://logodownload.org/wp-content/uploads/2018/02/reddit-logo-16.png" alt="Reddit"></a>
+                <a href="https://www.peopleperhour.com/freelancer/andres-jimenez-freelance-python-developer-zzyynamz"><img src="https://cufinder.io/_next/image?url=https%3A%2F%2Fcufinder.io%2Fimages%2Fmarketing-logos%2Fpeopleperhour.com.png&w=640&q=75" alt="People Per Hour"></a>
+                <a href="https://stackoverflow.com/users/24101727/jorge-prieto"><img src="https://www.logo.wine/a/logo/Stack_Overflow/Stack_Overflow-Icon-Logo.wine.svg" alt="Stack Overflow"></a>
+            </p>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 Andrés Jiménez. Todos los derechos reservados.</p>
     </footer>
