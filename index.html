@@ -40,45 +40,27 @@
         main {
             flex: 1;
             padding: 20px;
-            max-width: 900px;
+            max-width: 1200px;
             margin: 20px auto;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-        main:hover {
-            transform: translateY(-5px);
         }
         h2 {
             text-align: center;
             color: #007bff;
         }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-        .buy-coffee button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        .buy-coffee button:hover {
-            background-color: #0056b3;
+        .portfolio-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
         }
         .project {
+            flex: 1 1 calc(33.333% - 20px);
             margin-bottom: 20px;
             border: 1px solid #ddd;
             border-radius: 10px;
             padding: 15px;
             transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #fff;
         }
         .project:hover {
             transform: translateY(-5px);
@@ -128,6 +110,12 @@
                 opacity: 1;
             }
         }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -147,56 +135,58 @@
         </section>
         <section id="portfolio" class="portfolio">
             <h2>Portafolio</h2>
-            <div class="project">
-                <h3>🤖 Nacho Bot</h3>
-                <p>Un chat bot que funciona con la API de OpenAI para resolver preguntas asociadas a la Universidad Nacional sede Medellín.</p>
-                <p><a href="https://nachobot.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Nacho_Bot">Repositorio</a></p>
-            </div>
-            <div class="project">
-                <h3>🗣️ UNalBot</h3>
-                <p>UNalBot es un chatbot diseñado y creado por mí, un estudiante de la Universidad Nacional de Colombia, el bot está hecho para servir como un asistente virtual dentro de la misma universidad.</p>
-                <p><a href="https://chatbot-un-e3y6wrkckde9tqvuknapp3u.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Chat_Bot">Repositorio</a></p>
-            </div>
-            <div class="project">
-                <h3>🔍 Motor de Búsqueda</h3>
-                <p>Aplicación web que permite a los usuarios buscar empresas por nombre en un conjunto de datos de empresas colombianas.</p>
-                <p><a href="https://motorbusqueda-b7vqjan3gqwfogzshn8dr.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Motor_busqueda">Repositorio</a></p>
-            </div>
-            <div class="project">
-                <h3>💹 Simulador de Inversiones</h3>
-                <p>Esta aplicación permite a los usuarios simular el crecimiento de una inversión a lo largo del tiempo.</p>
-                <p><a href="https://simulador-de-inversiones-2v5pajvufmgvfgwah7r89r.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Simulador-de-Inversiones">Repositorio</a></p>
-            </div>
-            <div class="project">
-                <h3>📊 Análisis de Datos</h3>
-                <p>Analiza un conjunto de datos de empresas colombianas para obtener información sobre su estado, municipio, rango de empleados y otras características relevantes.</p>
-                <p><a href="https://data543njfdkmc8qsqcggrjk3.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Analisis_Datos">Repositorio</a></p>
-            </div>
-            <div class="project">
-                <h3>🛠️ Control Total</h3>
-                <p>El proyecto <strong>Control Total</strong> es un sistema de inventario y ventas desarrollado con:</p>
-                <p>
-                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-                    <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
-                    <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
-                    <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy"/>
-                    <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
-                    <img src="https://img.shields.io/badge/Matplotlib-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Matplotlib"/>
-                    <img src="https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white" alt="SciPy"/>
-                    <img src="https://img.shields.io/badge/GeoPandas-1B1B1B?style=for-the-badge&logo=geopandas&logoColor=white" alt="GeoPandas"/>
-                </p>
-                <p>Esta aplicación permite a los pequeños y medianos negocios gestionar eficazmente sus productos, ventas y clientes. La app incluye:</p>
-                <ul>
-                    <li>Logueo con indicación de la tienda desde la que se está ingresando.</li>
-                    <li>Políticas de tratamiento de datos.</li>
-                    <li>Gestión de usuarios.</li>
-                    <li>Ventas y facturación.</li>
-                    <li>Gestión de clientes para permitir créditos.</li>
-                    <li>Gestión de inventarios.</li>
-                    <li>Análisis estadísticos como ventas diarias, métodos de pago, cuadre de caja, estadísticas descriptivas y pruebas de hipótesis.</li>
-                    <li>Gestión de entregas para domicilios.</li>
-                </ul>
-                <p><a href="https://controltotal.streamlit.app/">Aplicación</a></p>
+            <div class="portfolio-grid">
+                <div class="project">
+                    <h3>🤖 Nacho Bot</h3>
+                    <p>Un chat bot que funciona con la API de OpenAI para resolver preguntas asociadas a la Universidad Nacional sede Medellín.</p>
+                    <p><a href="https://nachobot.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Nacho_Bot">Repositorio</a></p>
+                </div>
+                <div class="project">
+                    <h3>🗣️ UNalBot</h3>
+                    <p>UNalBot es un chatbot diseñado y creado por mí, un estudiante de la Universidad Nacional de Colombia, el bot está hecho para servir como un asistente virtual dentro de la misma universidad.</p>
+                    <p><a href="https://chatbot-un-e3y6wrkckde9tqvuknapp3u.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Chat_Bot">Repositorio</a></p>
+                </div>
+                <div class="project">
+                    <h3>🔍 Motor de Búsqueda</h3>
+                    <p>Aplicación web que permite a los usuarios buscar empresas por nombre en un conjunto de datos de empresas colombianas.</p>
+                    <p><a href="https://motorbusqueda-b7vqjan3gqwfogzshn8dr.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Motor_busqueda">Repositorio</a></p>
+                </div>
+                <div class="project">
+                    <h3>💹 Simulador de Inversiones</h3>
+                    <p>Esta aplicación permite a los usuarios simular el crecimiento de una inversión a lo largo del tiempo.</p>
+                    <p><a href="https://simulador-de-inversiones-2v5pajvufmgvfgwah7r89r.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Simulador-de-Inversiones">Repositorio</a></p>
+                </div>
+                <div class="project">
+                    <h3>📊 Análisis de Datos</h3>
+                    <p>Analiza un conjunto de datos de empresas colombianas para obtener información sobre su estado, municipio, rango de empleados y otras características relevantes.</p>
+                    <p><a href="https://data543njfdkmc8qsqcggrjk3.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Analisis_Datos">Repositorio</a></p>
+                </div>
+                <div class="project">
+                    <h3>🛠️ Control Total</h3>
+                    <p>El proyecto <strong>Control Total</strong> es un sistema de inventario y ventas desarrollado con:</p>
+                    <p>
+                        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+                        <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+                        <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
+                        <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy"/>
+                        <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
+                        <img src="https://img.shields.io/badge/Matplotlib-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Matplotlib"/>
+                        <img src="https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white" alt="SciPy"/>
+                        <img src="https://img.shields.io/badge/GeoPandas-1B1B1B?style=for-the-badge&logo=geopandas&logoColor=white" alt="GeoPandas"/>
+                    </p>
+                    <p>Esta aplicación permite a los pequeños y medianos negocios gestionar eficazmente sus productos, ventas y clientes. La app incluye:</p>
+                    <ul>
+                        <li>Logueo con indicación de la tienda desde la que se está ingresando.</li>
+                        <li>Políticas de tratamiento de datos.</li>
+                        <li>Gestión de usuarios.</li>
+                        <li>Ventas y facturación.</li>
+                        <li>Gestión de clientes para permitir créditos.</li>
+                        <li>Gestión de inventarios.</li>
+                        <li>Análisis estadísticos como ventas diarias, métodos de pago, cuadre de caja, estadísticas descriptivas y pruebas de hipótesis.</li>
+                        <li>Gestión de entregas para domicilios.</li>
+                    </ul>
+                    <p><a href="https://controltotal.streamlit.app/">Aplicación</a></p>
+                </div>
             </div>
         </section>
         <section id="technologies" class="technologies">
