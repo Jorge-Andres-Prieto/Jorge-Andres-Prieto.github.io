@@ -6,7 +6,7 @@
     <title>Andrés Jiménez - Desarrollador de Software</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background: linear-gradient(to right, #e0eafc, #cfdef3);
@@ -15,30 +15,39 @@
         nav {
             text-align: center;
             background-color: #333;
-            padding: 5px 0;
+            padding: 10px 0;
+            box-shadow: 0 4px 2px -2px gray;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
             color: #fff;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 16px;
+        }
+        nav a:hover {
+            color: #ffdd00;
         }
         section {
             padding: 20px;
             max-width: 800px;
-            margin: auto;
+            margin: 20px auto;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+            border-radius: 10px;
         }
         footer {
-            background-color: #000;
+            background-color: #333;
             color: #fff;
             text-align: center;
             padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 -4px 2px -2px gray;
         }
         .buy-coffee button {
             background-color: #007bff;
@@ -46,6 +55,11 @@
             padding: 10px 20px;
             border: none;
             cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .buy-coffee button:hover {
+            background-color: #0056b3;
         }
         .project {
             margin-bottom: 20px;
@@ -59,9 +73,17 @@
         }
         .technologies img {
             margin: 5px;
+            border-radius: 5px;
         }
         .contact-icons img {
             margin: 10px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            transition: transform 0.2s;
+        }
+        .contact-icons img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -167,13 +189,13 @@
         <h2>Contacto</h2>
         <p>Puedes contactarme a través de los siguientes medios:</p>
         <p class="contact-icons">
-            <a href="https://www.linkedin.com/in/jorge-prieto-b36ab2250/"><img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG37.png" alt="LinkedIn" width="50"></a>
-            <a href="https://www.fiverr.com/andres__jimenez?public_mode=true"><img src="https://freelogopng.com/images/all_img/1656738600fiverr-app-logo.png" alt="Fiverr" width="50"></a>
-            <a href="https://www.upwork.com/freelancers/~0142bd1ae6229261b5"><img src="https://w7.pngwing.com/pngs/80/704/png-transparent-upwork-hd-logo-thumbnail.png" alt="Upwork" width="50"></a>
-            <a href="https://github.com/Jorge-Andres-Prieto"><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/github-512.png" alt="GitHub" width="50"></a>
-            <a href="https://www.reddit.com/user/Flestar/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"><img src="https://logodownload.org/wp-content/uploads/2018/02/reddit-logo-16.png" alt="Reddit" width="50"></a>
-            <a href="https://www.peopleperhour.com/freelancer/andres-jimenez-freelance-python-developer-zzyynamz"><img src="https://cufinder.io/_next/image?url=https%3A%2F%2Fcufinder.io%2Fimages%2Fmarketing-logos%2Fpeopleperhour.com.png&w=640&q=75" alt="People Per Hour" width="50"></a>
-            <a href="https://stackoverflow.com/users/24101727/jorge-prieto"><img src="https://www.logo.wine/a/logo/Stack_Overflow/Stack_Overflow-Icon-Logo.wine.svg" alt="Stack Overflow" width="50"></a>
+            <a href="https://www.linkedin.com/in/jorge-prieto-b36ab2250/"><img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG37.png" alt="LinkedIn"></a>
+            <a href="https://www.fiverr.com/andres__jimenez?public_mode=true"><img src="https://freelogopng.com/images/all_img/1656738600fiverr-app-logo.png" alt="Fiverr"></a>
+            <a href="https://www.upwork.com/freelancers/~0142bd1ae6229261b5"><img src="https://w7.pngwing.com/pngs/80/704/png-transparent-upwork-hd-logo-thumbnail.png" alt="Upwork"></a>
+            <a href="https://github.com/Jorge-Andres-Prieto"><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/github-512.png" alt="GitHub"></a>
+            <a href="https://www.reddit.com/user/Flestar/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"><img src="https://logodownload.org/wp-content/uploads/2018/02/reddit-logo-16.png" alt="Reddit"></a>
+            <a href="https://www.peopleperhour.com/freelancer/andres-jimenez-freelance-python-developer-zzyynamz"><img src="https://cufinder.io/_next/image?url=https%3A%2F%2Fcufinder.io%2Fimages%2Fmarketing-logos%2Fpeopleperhour.com.png&w=640&q=75" alt="People Per Hour"></a>
+            <a href="https://stackoverflow.com/users/24101727/jorge-prieto"><img src="https://www.logo.wine/a/logo/Stack_Overflow/Stack_Overflow-Icon-Logo.wine.svg" alt="Stack Overflow"></a>
         </p>
     </section>
     <footer>
