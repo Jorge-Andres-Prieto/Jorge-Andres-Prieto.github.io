@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrés Jiménez - Desarrollador de Software</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap');
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
             background: linear-gradient(to right, #e0eafc, #cfdef3);
@@ -43,8 +43,16 @@
             max-width: 1200px;
             margin: 20px auto;
         }
-        h2 {
+        h1, h2 {
             text-align: center;
+            font-family: 'Merriweather', serif;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 1.8em;
             color: #007bff;
         }
         .portfolio-grid {
@@ -101,6 +109,7 @@
         }
         .about p {
             animation: fadeIn 1.5s ease-in-out;
+            font-family: 'Lato', sans-serif;
         }
         @keyframes fadeIn {
             from {
@@ -129,8 +138,7 @@
     <main>
         <section id="about" class="about">
             <h1>Andrés Jiménez</h1>
-            <p>Desarrollador de Software</p>
-            <h2>Sobre mí</h2>
+            <h2>Desarrollador de Software</h2>
             <p>Soy estudiante de Ingeniería de Sistemas en la Universidad Nacional. Tengo un fuerte interés en análisis de datos y me apasiona utilizar la tecnología para resolver problemas y mejorar la eficiencia. Además, tengo experiencia en el uso de la API de OpenAI para desarrollar aplicaciones con inteligencia artificial.</p>
         </section>
         <section id="portfolio" class="portfolio">
