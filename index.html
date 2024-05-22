@@ -11,19 +11,11 @@
             font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            background-size: 400% 400%;
-            animation: gradientAnimation 15s ease infinite;
-            color: #fff;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            color: #333;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-        }
-
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
 
         nav {
@@ -49,7 +41,7 @@
         main {
             flex: 1;
             padding: 20px;
-            max-width: 1000px;
+            max-width: 900px;
             margin: 20px auto;
         }
         h1, h2 {
@@ -62,7 +54,7 @@
         }
         h2 {
             font-size: 1.8em;
-            color: #ffdd00;
+            color: #007bff;
         }
         .portfolio-grid {
             display: flex;
@@ -94,23 +86,66 @@
             color: #0056b3;
             text-decoration: underline;
         }
-        .technologies img {
-            margin: 5px;
+        .technologies {
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .technology {
+            margin-bottom: 10px;
+        }
+        .technology h3 {
+            font-size: 1.2em;
+            color: #007bff;
+        }
+        .buy-coffee {
+            text-align: center;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .buy-coffee a {
+            color: #fff;
+            background-color: #ffdd00;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
             border-radius: 5px;
-            transition: transform 0.3s;
+            transition: background-color 0.3s;
         }
-        .technologies img:hover {
-            transform: scale(1.1);
+        .buy-coffee a:hover {
+            background-color: #e6c200;
         }
-        .contact-icons img {
-            margin: 10px;
-            border-radius: 50%;
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .contact-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 50px;
             height: 50px;
-            transition: transform 0.3s;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 50%;
+            transition: transform 0.3s, background-color 0.3s;
         }
-        .contact-icons img:hover {
+        .contact-icons a:hover {
             transform: scale(1.1);
+            background-color: #0056b3;
+        }
+        .contact-icons svg {
+            width: 24px;
+            height: 24px;
         }
         .about h1 {
             font-size: 2.5em;
@@ -188,46 +223,63 @@
         </section>
         <section id="technologies" class="technologies">
             <h2>Tecnologías</h2>
-            <p>Estas son las tecnologías que sé usar para backend y análisis de datos:</p>
-            <p>
-                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-                <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy"/>
-                <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
-                <img src="https://img.shields.io/badge/Matplotlib-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Matplotlib"/>
-            </p>
-            <p>Estas son las tecnologías que sé usar para bases de datos:</p>
-            <p>
-                <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
-                <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
-                <img src="https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white" alt="SQL Server"/>
-            </p>
-            <p>Estas son las tecnologías que sé usar para desarrollo web e inteligencia artificial:</p>
-            <p>
-                <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
-                <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI"/>
-            </p>
+            <div class="technology">
+                <h3>Python</h3>
+                <p>Utilizado para desarrollar la lógica de backend de las aplicaciones, permitiendo manipulación de datos, automatización de tareas y creación de algoritmos complejos.</p>
+            </div>
+            <div class="technology">
+                <h3>NumPy</h3>
+                <p>Empleado en análisis numérico y operaciones con matrices, esencial para cálculos científicos y de ingeniería.</p>
+            </div>
+            <div class="technology">
+                <h3>Pandas</h3>
+                <p>Herramienta fundamental para la manipulación y análisis de datos, utilizada para trabajar con grandes volúmenes de información estructurada.</p>
+            </div>
+            <div class="technology">
+                <h3>Matplotlib</h3>
+                <p>Librería de gráficos utilizada para la visualización de datos, creando gráficos estáticos, animados e interactivos en Python.</p>
+            </div>
+            <div class="technology">
+                <h3>Streamlit</h3>
+                <p>Framework utilizado para la creación rápida de aplicaciones web interactivas y visualización de datos.</p>
+            </div>
+            <div class="technology">
+                <h3>OpenAI</h3>
+                <p>API utilizada para integrar capacidades de inteligencia artificial y procesamiento del lenguaje natural en las aplicaciones.</p>
+            </div>
         </section>
         <section id="buy-coffee" class="buy-coffee">
             <h2>Buy me a Coffee</h2>
             <p>Si te gusta mi trabajo y deseas apoyarme, considera invitarme a un café. Esto me ayudará a seguir creando proyectos y soluciones innovadoras. ¡Gracias por tu apoyo!</p>
             <p>
-                <a href="https://www.buymeacoffee.com/Andres.Jimenez">
-                    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee"/>
-                </a>
+                <a href="https://www.buymeacoffee.com/Andres.Jimenez">Invítame a un café</a>
             </p>
         </section>
         <section id="contact" class="contact">
             <h2>Contacto</h2>
-            <p>Puedes contactarme a través de los siguientes medios:</p>
-            <p class="contact-icons">
-                <a href="https://www.linkedin.com/in/jorge-prieto-b36ab2250/"><img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG37.png" alt="LinkedIn"></a>
-                <a href="https://www.fiverr.com/andres__jimenez?public_mode=true"><img src="https://freelogopng.com/images/all_img/1656738600fiverr-app-logo.png" alt="Fiverr"></a>
-                <a href="https://www.upwork.com/freelancers/~0142bd1ae6229261b5"><img src="https://w7.pngwing.com/pngs/80/704/png-transparent-upwork-hd-logo-thumbnail.png" alt="Upwork"></a>
-                <a href="https://github.com/Jorge-Andres-Prieto"><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/github-512.png" alt="GitHub"></a>
-                <a href="https://www.reddit.com/user/Flestar/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"><img src="https://logodownload.org/wp-content/uploads/2018/02/reddit-logo-16.png" alt="Reddit"></a>
-                <a href="https://www.peopleperhour.com/freelancer/andres-jimenez-freelance-python-developer-zzyynamz"><img src="https://cufinder.io/_next/image?url=https%3A%2F%2Fcufinder.io%2Fimages%2Fmarketing-logos%2Fpeopleperhour.com.png&w=640&q=75" alt="People Per Hour"></a>
-                <a href="https://stackoverflow.com/users/24101727/jorge-prieto"><img src="https://www.logo.wine/a/logo/Stack_Overflow/Stack_Overflow-Icon-Logo.wine.svg" alt="Stack Overflow"></a>
-            </p>
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/jorge-prieto-b36ab2250/" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.25 3H4.75C4.336 3 4 3.336 4 3.75v16.5c0 .414.336.75.75.75h14.5c.414 0 .75-.336.75-.75V3.75c0-.414-.336-.75-.75-.75zM8.09 19.5H5.75v-9h2.34v9zM6.91 8.73c-.747 0-1.35-.603-1.35-1.35s.603-1.35 1.35-1.35 1.35.603 1.35 1.35-.603 1.35-1.35 1.35zM18.25 19.5h-2.34v-4.84c0-2.49-3-2.3-3 0v4.84h-2.34v-9h2.34v1.23c1.014-1.88 5-2.03 5 1.76v6.01z"/></svg>
+                </a>
+                <a href="https://www.fiverr.com/andres__jimenez?public_mode=true" aria-label="Fiverr">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.88 17.84v-4.13h1.76v4.13h-1.76zm-.02-5.35c-.67 0-1.22-.55-1.22-1.22s.55-1.22 1.22-1.22 1.22.55 1.22 1.22-.55 1.22-1.22 1.22zm2.02-3.15H9.12c-.68 0-1.3-.29-1.76-.76-.47-.47-.76-1.08-.76-1.76 0-.68.29-1.3.76-1.76.47-.47 1.08-.76 1.76-.76h2.03v1.76h-2.03c-.22 0-.43.1-.59.25-.15.16-.25.37-.25.59 0 .22.1.43.25.59.16.15.37.25.59.25h2.75c.68 0 1.3.29 1.76.76.47.47.76 1.08.76 1.76s-.29 1.3-.76 1.76c-.47.47-1.08.76-1.76.76z"/></svg>
+                </a>
+                <a href="https://www.upwork.com/freelancers/~0142bd1ae6229261b5" aria-label="Upwork">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.88 17.84v-4.13h1.76v4.13h-1.76zm-.02-5.35c-.67 0-1.22-.55-1.22-1.22s.55-1.22 1.22-1.22 1.22.55 1.22 1.22-.55 1.22-1.22 1.22zm2.02-3.15H9.12c-.68 0-1.3-.29-1.76-.76-.47-.47-.76-1.08-.76-1.76 0-.68.29-1.3.76-1.76.47-.47 1.08-.76 1.76-.76h2.03v1.76h-2.03c-.22 0-.43.1-.59.25-.15.16-.25.37-.25.59 0 .22.1.43.25.59.16.15.37.25.59.25h2.75c.68 0 1.3.29 1.76.76.47.47.76 1.08.76 1.76s-.29 1.3-.76 1.76c-.47.47-1.08.76-1.76.76z"/></svg>
+                </a>
+                <a href="https://github.com/Jorge-Andres-Prieto" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.14 6.84 9.46.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.79.61-3.38-1.34-3.38-1.34-.45-1.17-1.1-1.48-1.1-1.48-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.82.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8a9.56 9.56 0 012.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.39.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.93.68 1.88 0 1.36-.01 2.45-.01 2.78 0 .27.18.58.69.48A10.017 10.017 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+                </a>
+                <a href="https://www.reddit.com/user/Flestar/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" aria-label="Reddit">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.45 14.5h-.03c-.36 0-.71-.19-.88-.49l-1.63-.02a5.45 5.45 0 01-1.42 0l-1.63.02a.99.99 0 01-.88.49h-.03a.9.9 0 01-.88-1.2 5.19 5.19 0 013.1-3.12c.37-.14.78-.14 1.15 0a5.19 5.19 0 013.1 3.12.9.9 0 01-.88 1.2zm-2.62-3.83a2.23 2.23 0 11-2.23-2.23 2.23 2.23 0 012.23 2.23z"/></svg>
+                </a>
+                <a href="https://www.peopleperhour.com/freelancer/andres-jimenez-freelance-python-developer-zzyynamz" aria-label="People Per Hour">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-.88 14.5h-2.34v-5.25h2.34v5.25zM8.88 9.88a1.53 1.53 0 01-1.53-1.53c0-.85.69-1.53 1.53-1.53s1.53.69 1.53 1.53-.69 1.53-1.53 1.53zm8.74 6.62h-2.34v-2.63c0-2.63-3.32-2.42-3.32 0v2.63h-2.34v-5.25h2.34v.81c1.03-1.63 5-1.74 5 1.62v2.82z"/></svg>
+                </a>
+                <a href="https://stackoverflow.com/users/24101727/jorge-prieto" aria-label="Stack Overflow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5.14 15.64h-10.3v-1.98h10.3v1.98zm.36-3.17l-8.36-.69.17-1.92 8.36.69-.17 1.92zm-.42-3.02l-7.79-1.71.5-1.84 7.79 1.71-.5 1.84zm-.7-3.14l-6.95-2.67.83-1.66 6.95 2.67-.83 1.66zm-1.11-3.53L8.41 6.57l1.09-1.52 6.95 3.91-1.08 1.51zM8.33 19.5h7.33v-1.92H8.33v1.92z"/></svg>
+                </a>
+            </div>
         </section>
     </main>
     <footer>
