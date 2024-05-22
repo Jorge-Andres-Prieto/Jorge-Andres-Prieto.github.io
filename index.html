@@ -18,32 +18,13 @@
             min-height: 100vh;
         }
 
-        nav {
-            text-align: center;
-            background-color: #5a2d40;
-            padding: 10px 0;
-            box-shadow: 0 4px 2px -2px gray;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #64ffda;
-        }
         main {
             flex: 1;
             padding: 20px;
             max-width: 900px;
             margin: 20px auto;
         }
+
         .profile {
             display: flex;
             align-items: center;
@@ -107,17 +88,19 @@
             display: inline-block;
             margin-top: 10px;
             padding: 10px 20px;
-            color: #0a192f;
-            background-color: #64ffda;
+            color: #fff;
+            background-color: #233554;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
+            border: 2px solid #64ffda;
             transition: background-color 0.3s, color 0.3s;
         }
         .profile-info .download-cv:hover {
-            background-color: #233554;
-            color: #64ffda;
+            background-color: #64ffda;
+            color: #233554;
         }
+
         .portfolio-grid {
             display: flex;
             flex-wrap: wrap;
@@ -148,6 +131,7 @@
             color: #ccd6f6;
             text-decoration: underline;
         }
+
         .technology {
             margin-bottom: 20px;
         }
@@ -155,6 +139,7 @@
             font-size: 1.4em;
             color: #64ffda;
         }
+
         .buy-coffee {
             text-align: center;
             padding: 15px;
@@ -178,6 +163,7 @@
         .buy-coffee img {
             margin-left: 10px;
         }
+
         .contact-icons {
             display: flex;
             justify-content: center;
@@ -204,6 +190,7 @@
             width: 24px;
             height: 24px;
         }
+
         .about h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
@@ -221,6 +208,7 @@
                 opacity: 1;
             }
         }
+
         footer {
             background-color: #233554;
             color: #fff;
@@ -230,13 +218,6 @@
     </style>
 </head>
 <body>
-    <nav>
-        <a href="#about">Sobre mí</a>
-        <a href="#portfolio">Portafolio</a>
-        <a href="#technologies">Tecnologías</a>
-        <a href="#buy-coffee">Buy me a Coffee</a>
-        <a href="#contact">Contacto</a>
-    </nav>
     <main>
         <section class="profile">
             <img src="path_to_your_image.jpg" alt="Andrés Jiménez">
@@ -251,7 +232,7 @@
                     <a href="https://github.com/Jorge-Andres-Prieto" aria-label="GitHub">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.14 6.84 9.46.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.79.61-3.38-1.34-3.38-1.34-.45-1.17-1.1-1.48-1.1-1.48-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.82.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8a9.56 9.56 0 012.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.39.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.93.68 1.88 0 1.36-.01 2.45-.01 2.78 0 .27.18.58.69.48A10.017 10.017 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
                     </a>
-                    <a href="path_to_your_cv.pdf" class="download-cv">Descargar CV</a>
+                    <a href="path_to_your_cv.pdf" class="download-cv">Download CV</a>
                 </div>
             </div>
         </section>
@@ -332,12 +313,6 @@
             <div class="contact-icons">
                 <a href="https://www.linkedin.com/in/jorge-prieto-b36ab2250/" aria-label="LinkedIn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.25 3H4.75C4.336 3 4 3.336 4 3.75v16.5c0 .414.336.75.75.75h14.5c.414 0 .75-.336.75-.75V3.75c0-.414-.336-.75-.75-.75zM8.09 19.5H5.75v-9h2.34v9zM6.91 8.73c-.747 0-1.35-.603-1.35-1.35s.603-1.35 1.35-1.35 1.35.603 1.35 1.35-.603 1.35-1.35 1.35zM18.25 19.5h-2.34v-4.84c0-2.49-3-2.3-3 0v4.84h-2.34v-9h2.34v1.23c1.014-1.88 5-2.03 5 1.76v6.01z"/></svg>
-                </a>
-                <a href="https://www.fiverr.com/andres__jimenez?public_mode=true" aria-label="Fiverr">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.88 17.84v-4.13h1.76v4.13h-1.76zm-.02-5.35c-.67 0-1.22-.55-1.22-1.22s.55-1.22 1.22-1.22 1.22.55 1.22 1.22-.55 1.22-1.22 1.22zm2.02-3.15H9.12c-.68 0-1.3-.29-1.76-.76-.47-.47-.76-1.08-.76-1.76 0-.68.29-1.3.76-1.76.47-.47 1.08-.76 1.76-.76h2.03v1.76h-2.03c-.22 0-.43.1-.59.25-.15.16-.25.37-.25.59 0 .22.1.43.25.59.16.15.37.25.59.25h2.75c.68 0 1.3.29 1.76.76.47.47.76 1.08.76 1.76s-.29 1.3-.76 1.76c-.47.47-1.08.76-1.76.76z"/></svg>
-                </a>
-                <a href="https://www.upwork.com/freelancers/~0142bd1ae6229261b5" aria-label="Upwork">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.88 17.84v-4.13h1.76v4.13h-1.76zm-.02-5.35c-.67 0-1.22-.55-1.22-1.22s.55-1.22 1.22-1.22 1.22.55 1.22 1.22-.55 1.22-1.22 1.22zm2.02-3.15H9.12c-.68 0-1.3-.29-1.76-.76-.47-.47-.76-1.08-.76-1.76 0-.68.29-1.3.76-1.76.47-.47 1.08-.76 1.76-.76h2.03v1.76h-2.03c-.22 0-.43.1-.59.25-.15.16-.25.37-.25.59 0 .22.1.43.25.59.16.15.37.25.59.25h2.75c.68 0 1.3.29 1.76.76.47.47.76 1.08.76 1.76s-.29 1.3-.76 1.76c-.47.47-1.08.76-1.76.76z"/></svg>
                 </a>
                 <a href="https://github.com/Jorge-Andres-Prieto" aria-label="GitHub">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.14 6.84 9.46.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.79.61-3.38-1.34-3.38-1.34-.45-1.17-1.1-1.48-1.1-1.48-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.82.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8a9.56 9.56 0 012.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.39.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.93.68 1.88 0 1.36-.01 2.45-.01 2.78 0 .27.18.58.69.48A10.017 10.017 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
