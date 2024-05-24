@@ -183,11 +183,14 @@
             font-size: 1.8em;
             color: #64ffda;
         }
-        .experience p {
+        .experience .exp-item {
+            background-color: #112240;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
             color: #8892b0;
             text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
         }
 
         .buy-coffee {
@@ -274,7 +277,7 @@
     <header>
         <nav>
             <a href="#profile">Sobre Mí</a>
-            <a href="#portfolio">Portafolio</a>
+            <a href="#projects">Proyectos</a>
             <a href="#experience">Experiencia</a>
             <a href="#technologies">Tecnologías</a>
             <a href="#buy-coffee">Buy me a Coffee</a>
@@ -293,31 +296,14 @@
                 </div>
             </div>
         </section>
-        <section id="experience" class="experience">
-            <h2>Experiencia</h2>
-            <p>
-                Desarrollé un sistema para gestionar ventas, inventarios, clientes y usuarios. El sistema cuenta con cuadre de caja, opciones de análisis de ventas, crédito para clientes conocidos tipo fiado, y tiene una opción para marcar la mejor ruta y el orden de entrega para los domicilios. Para este proyecto, utilicé Python y las librerías (Pandas, NumPy, SciPy, GeoPandas y Matplotlib), Streamlit, PostgreSQL, y para desplegar la base de datos utilicé Render.
-            </p>
-            <p>
-                También tengo experiencia en la creación de un chatbot que interpreta el lenguaje natural de forma correcta y acertada, y puede responder cualquier tipo de preguntas específicas para el negocio al que se le integre. Para este proyecto, usé Python, Streamlit y la API de OpenAI para interpretar el lenguaje natural.
-            </p>
-            <p>
-                Si quieren ver estos proyectos, pueden encontrarlos en el portafolio.
-            </p>
-        </section>
-        <section id="portfolio" class="portfolio">
-            <h2>Portafolio</h2>
+        <section id="projects" class="portfolio">
+            <h2>Proyectos</h2>
             <p>Si quieres conocer más a detalle el proyecto como su código, documentación, comentarios y cómo fue construido, puedes darle clic en "Repositorio" y leer un README con toda la información importante acerca del proyecto. Además, si quieres ver la app desplegada y funcionando, puedes darle clic en "Aplicación".</p>
             <div class="portfolio-grid">
                 <div class="project">
                     <h3>🤖 Nacho Bot</h3>
                     <p>Un chat bot que funciona con la API de OpenAI para resolver preguntas asociadas a la Universidad Nacional sede Medellín.</p>
                     <p><a href="https://nachobot.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Nacho_Bot">Repositorio</a></p>
-                </div>
-                <div class="project">
-                    <h3>🗣️ UNalBot</h3>
-                    <p>UNalBot es un chatbot diseñado y creado por mí, un estudiante de la Universidad Nacional de Colombia, el bot está hecho para servir como un asistente virtual dentro de la misma universidad.</p>
-                    <p><a href="https://chatbot-un-e3y6wrkckde9tqvuknapp3u.streamlit.app/">Aplicación</a> | <a href="https://github.com/Jorge-Andres-Prieto/Chat_Bot">Repositorio</a></p>
                 </div>
                 <div class="project">
                     <h3>🔍 Motor de Búsqueda</h3>
@@ -341,30 +327,46 @@
                 </div>
             </div>
         </section>
+        <section id="experience" class="experience">
+            <h2>Experiencia</h2>
+            <div class="exp-item">
+                <p>
+                    Desarrollé un sistema integral para gestionar ventas, inventarios, clientes y usuarios. Este sistema incluye funciones como cuadre de caja, opciones de análisis de ventas, crédito para clientes conocidos tipo fiado, y una opción para marcar la mejor ruta y el orden de entrega para los domicilios. Utilicé Python junto con librerías como Pandas, NumPy, SciPy, GeoPandas y Matplotlib. La interfaz fue creada con Streamlit, y la base de datos se gestionó con PostgreSQL, desplegada en Render.
+                </p>
+            </div>
+            <div class="exp-item">
+                <p>
+                    Creé un chatbot capaz de interpretar el lenguaje natural y responder preguntas específicas relacionadas con un negocio. Este chatbot se diseñó para integrarse en diversas plataformas empresariales, ofreciendo respuestas precisas y útiles. El proyecto se desarrolló usando Python, Streamlit y la API de OpenAI para la interpretación del lenguaje natural.
+                </p>
+                <p>
+                    Si quieren ver estos proyectos, pueden encontrarlos en la sección de Proyectos.
+                </p>
+            </div>
+        </section>
         <section id="technologies" class="technologies">
             <h2>Tecnologías</h2>
             <div class="tech-group">
                 <h4>Backend</h4>
                 <p>
-                    <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python" style="width: 100px;">
+                    <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python" style="width: 50px;">
                     Utilizado para desarrollar la lógica de backend de las aplicaciones, permitiendo manipulación de datos, automatización de tareas y creación de algoritmos complejos. Incluye librerías como <span class="python-libs">NumPy, Pandas, Matplotlib, SciPy y GeoPandas</span>.
                 </p>
                 <p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" alt="PostgreSQL" style="width: 100px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" alt="PostgreSQL" style="width: 50px;">
                     Base de datos relacional utilizada para almacenar y gestionar grandes volúmenes de datos.
                 </p>
             </div>
             <div class="tech-group">
                 <h4>Frontend</h4>
                 <p>
-                    <img src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png" alt="Streamlit" style="width: 100px;">
+                    <img src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png" alt="Streamlit" style="width: 50px;">
                     Framework utilizado para la creación rápida de aplicaciones web interactivas y visualización de datos.
                 </p>
             </div>
             <div class="tech-group">
                 <h4>Inteligencia Artificial</h4>
                 <p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/OpenAI_Logo.svg" alt="OpenAI" style="width: 100px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/OpenAI_Logo.svg" alt="OpenAI" style="width: 50px;">
                     API utilizada para integrar capacidades de inteligencia artificial y procesamiento del lenguaje natural en las aplicaciones.
                 </p>
             </div>
