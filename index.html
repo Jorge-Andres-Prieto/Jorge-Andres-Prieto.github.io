@@ -18,6 +18,24 @@
             min-height: 100vh;
         }
 
+        header {
+            background-color: #112240;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            color: #64ffda;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #8892b0;
+        }
+
         main {
             flex: 1;
             padding: 20px;
@@ -34,8 +52,8 @@
         }
         .profile img {
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            width: 200px; /* Tamaño de la foto aumentado */
+            height: 200px; /* Tamaño de la foto aumentado */
             object-fit: cover;
             border: none;
         }
@@ -226,9 +244,18 @@
     </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="#profile">Sobre Mí</a>
+            <a href="#portfolio">Portafolio</a>
+            <a href="#technologies">Tecnologías</a>
+            <a href="#buy-coffee">Buy me a Coffee</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
     <main>
-        <section class="profile">
-            <img src="https://i.imgur.com/mhyv4rZ.jpg" alt="Andrés Jiménez">
+        <section id="profile" class="profile">
+            <img src="https://imgur.com/mhyv4rZ.jpg" alt="Andrés Jiménez">
             <div class="profile-info">
                 <h1>Andrés Jiménez</h1>
                 <h2>Desarrollador de Software</h2>
