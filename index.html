@@ -21,7 +21,7 @@
         header {
             background-color: #0a192f;
             padding: 10px 20px;
-            text-align: right;
+            text-align: left;
         }
 
         header nav a {
@@ -196,25 +196,28 @@
             gap: 20px;
             padding: 15px;
         }
-        .contact-icons a {
-            display: flex;
+        .contact-icons button {
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 50px;
-            height: 50px;
+            padding: 10px 20px;
+            color: #fff;
             background-color: #233554;
-            color: #64ffda;
-            border-radius: 50%;
-            transition: transform 0.3s, background-color 0.3s;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
         }
-        .contact-icons a:hover {
-            transform: scale(1.1);
+        .contact-icons button:hover {
             background-color: #64ffda;
             color: #233554;
         }
-        .contact-icons svg {
+        .contact-icons button svg {
             width: 24px;
             height: 24px;
+            margin-right: 8px;
         }
 
         .about h1 {
@@ -259,16 +262,8 @@
             <div class="profile-info">
                 <h1>Andrés Jiménez</h1>
                 <h2>Desarrollador de Software</h2>
-                <p>Apasionado por crear experiencias de usuario y aplicaciones web excepcionales. Dedicado a ofrecer resultados sobresalientes y comprometido con mantener una atención meticulosa a los detalles en todos mis trabajos.</p>
+                <p>Soy un desarrollador de software y estudiante de Ingeniería de Sistemas e Informática en la Universidad Nacional de Colombia. Tengo un fuerte interés en análisis de datos y me apasiona utilizar la tecnología para resolver problemas y mejorar la eficiencia. Además, tengo experiencia en el uso de la API de OpenAI para desarrollar aplicaciones con inteligencia artificial.</p>
                 <div class="icons">
-                    <button onclick="window.location.href='https://www.linkedin.com/in/jorge-prieto-b36ab2250/'">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.25 3H4.75C4.336 3 4 3.336 4 3.75v16.5c0 .414.336.75.75.75h14.5c.414 0 .75-.336.75-.75V3.75c0-.414-.336-.75-.75-.75zM8.09 19.5H5.75v-9h2.34v9zM6.91 8.73c-.747 0-1.35-.603-1.35-1.35s.603-1.35 1.35-1.35 1.35.603 1.35 1.35-.603 1.35-1.35 1.35zM18.25 19.5h-2.34v-4.84c0-2.49-3-2.3-3 0v4.84h-2.34v-9h2.34v1.23c1.014-1.88 5-2.03 5 1.76v6.01z"/></svg>
-                        LinkedIn
-                    </button>
-                    <button onclick="window.location.href='https://github.com/Jorge-Andres-Prieto'">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.14 6.84 9.46.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.79.61-3.38-1.34-3.38-1.34-.45-1.17-1.1-1.48-1.1-1.48-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.82.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8a9.56 9.56 0 012.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.39.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.93.68 1.88 0 1.36-.01 2.45-.01 2.78 0 .27.18.58.69.48A10.017 10.017 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
-                        GitHub
-                    </button>
                     <button class="download-cv" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1gpD5R1Ivd0jwnfWWdNJY-yWfOD05JWB7'">Descargar CV</button>
                 </div>
             </div>
@@ -315,7 +310,7 @@
                 <h4>Backend</h4>
                 <p>
                     <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-                    Utilizado para desarrollar la lógica de backend de las aplicaciones, permitiendo manipulación de datos, automatización de tareas y creación de algoritmos complejos.
+                    Utilizado para desarrollar la lógica de backend de las aplicaciones, permitiendo manipulación de datos, automatización de tareas y creación de algoritmos complejos. Incluye librerías como NumPy, Pandas, Matplotlib, SciPy y GeoPandas.
                 </p>
                 <p>
                     <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
@@ -327,21 +322,6 @@
                 <p>
                     <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit">
                     Framework utilizado para la creación rápida de aplicaciones web interactivas y visualización de datos.
-                </p>
-            </div>
-            <div class="tech-group">
-                <h4>Análisis de Datos</h4>
-                <p>
-                    <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
-                    Empleado en análisis numérico y operaciones con matrices, esencial para cálculos científicos y de ingeniería.
-                </p>
-                <p>
-                    <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
-                    Herramienta fundamental para la manipulación y análisis de datos, utilizada para trabajar con grandes volúmenes de información estructurada.
-                </p>
-                <p>
-                    <img src="https://img.shields.io/badge/Matplotlib-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Matplotlib">
-                    Librería de gráficos utilizada para la visualización de datos, creando gráficos estáticos, animados e interactivos en Python.
                 </p>
             </div>
             <div class="tech-group">
@@ -363,23 +343,28 @@
             </p>
         </section>
         <section id="contact" class="contact">
-            <h2>Contacto</h2>
+            <h2 style="text-align: center;">Contacto</h2>
             <div class="contact-icons">
-                <a href="https://www.linkedin.com/in/jorge-prieto-b36ab2250/" aria-label="LinkedIn">
+                <button onclick="window.location.href='https://www.linkedin.com/in/jorge-prieto-b36ab2250/'">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.25 3H4.75C4.336 3 4 3.336 4 3.75v16.5c0 .414.336.75.75.75h14.5c.414 0 .75-.336.75-.75V3.75c0-.414-.336-.75-.75-.75zM8.09 19.5H5.75v-9h2.34v9zM6.91 8.73c-.747 0-1.35-.603-1.35-1.35s.603-1.35 1.35-1.35 1.35.603 1.35 1.35-.603 1.35-1.35 1.35zM18.25 19.5h-2.34v-4.84c0-2.49-3-2.3-3 0v4.84h-2.34v-9h2.34v1.23c1.014-1.88 5-2.03 5 1.76v6.01z"/></svg>
-                </a>
-                <a href="https://github.com/Jorge-Andres-Prieto" aria-label="GitHub">
+                    LinkedIn
+                </button>
+                <button onclick="window.location.href='https://github.com/Jorge-Andres-Prieto'">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.14 6.84 9.46.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.79.61-3.38-1.34-3.38-1.34-.45-1.17-1.1-1.48-1.1-1.48-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.82.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8a9.56 9.56 0 012.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.39.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.93.68 1.88 0 1.36-.01 2.45-.01 2.78 0 .27.18.58.69.48A10.017 10.017 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
-                </a>
-                <a href="https://www.reddit.com/user/Flestar/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" aria-label="Reddit">
+                    GitHub
+                </button>
+                <button onclick="window.location.href='https://www.reddit.com/user/Flestar/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button'">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.45 14.5h-.03c-.36 0-.71-.19-.88-.49l-1.63-.02a5.45 5.45 0 01-1.42 0l-1.63.02a.99.99 0 01-.88.49h-.03a.9.9 0 01-.88-1.2 5.19 5.19 0 013.1-3.12c.37-.14.78-.14 1.15 0a5.19 5.19 0 013.1 3.12.9.9 0 01-.88 1.2zm-2.62-3.83a2.23 2.23 0 11-2.23-2.23 2.23 2.23 0 012.23 2.23z"/></svg>
-                </a>
-                <a href="https://www.peopleperhour.com/freelancer/andres-jimenez-freelance-python-developer-zzyynamz" aria-label="People Per Hour">
+                    Reddit
+                </button>
+                <button onclick="window.location.href='https://www.peopleperhour.com/freelancer/andres-jimenez-freelance-python-developer-zzyynamz'">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-.88 14.5h-2.34v-5.25h2.34v5.25zM8.88 9.88a1.53 1.53 0 01-1.53-1.53c0-.85.69-1.53 1.53-1.53s1.53.69 1.53 1.53-.69 1.53-1.53 1.53zm8.74 6.62h-2.34v-2.63c0-2.63-3.32-2.42-3.32 0v2.63h-2.34v-5.25h2.34v.81c1.03-1.63 5-1.74 5 1.62v2.82z"/></svg>
-                </a>
-                <a href="https://stackoverflow.com/users/24101727/jorge-prieto" aria-label="Stack Overflow">
+                    People Per Hour
+                </button>
+                <button onclick="window.location.href='https://stackoverflow.com/users/24101727/jorge-prieto'">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5.14 15.64h-10.3v-1.98h10.3v1.98zm.36-3.17l-8.36-.69.17-1.92 8.36.69-.17 1.92zm-.42-3.02l-7.79-1.71.5-1.84 7.79 1.71-.5 1.84zm-.7-3.14l-6.95-2.67.83-1.66 6.95 2.67-.83 1.66zm-1.11-3.53L8.41 6.57l1.09-1.52 6.95 3.91-1.08 1.51zM8.33 19.5h7.33v-1.92H8.33v1.92z"/></svg>
-                </a>
+                    Stack Overflow
+                </button>
             </div>
         </section>
     </main>
