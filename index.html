@@ -21,7 +21,11 @@
         header {
             background-color: #0a192f;
             padding: 10px 20px;
-            text-align: right; /* Alinea el menú a la derecha */
+            text-align: right;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
         header nav {
@@ -29,7 +33,7 @@
         }
 
         header nav a {
-            margin: 0 30px; /* Espacio entre opciones para centrado de sección "Sobre Mí" */
+            margin: 0 15px;
             color: #ffffff;
             text-decoration: none;
             font-weight: bold;
@@ -45,6 +49,7 @@
             padding: 20px;
             max-width: 900px;
             margin: 0 auto;
+            padding-top: 80px; /* Espacio para el menú fijo */
         }
 
         section h2 {
@@ -61,12 +66,12 @@
             justify-content: center;
             gap: 20px;
             margin-bottom: 40px;
-            height: 100vh; /* Asegura que sea la única sección visible al inicio */
+            height: 100vh;
         }
         .profile img {
             border-radius: 50%;
-            width: 200px; /* Tamaño de la foto aumentado */
-            height: 200px; /* Tamaño de la foto aumentado */
+            width: 200px;
+            height: 200px;
             object-fit: cover;
             border: none;
         }
@@ -84,6 +89,7 @@
             font-size: 1.8em;
             color: #64ffda;
             margin: 0;
+            text-align: left; /* Alineado a la izquierda */
         }
         .profile-info p {
             color: #8892b0;
@@ -121,7 +127,7 @@
 
         .portfolio {
             text-align: center;
-            margin-top: 40px; /* Añadido para que esté debajo del pliegue inicial */
+            margin-top: 40px;
         }
 
         .portfolio-grid {
@@ -174,7 +180,7 @@
             text-align: center;
         }
         .tech-group img {
-            width: 50px; /* Tamaño de los logotipos */
+            width: 70px; /* Tamaño aumentado de los logotipos */
             margin-right: 10px;
             vertical-align: middle;
         }
@@ -189,6 +195,7 @@
         }
         .python-libs img {
             margin: 5px 0;
+            width: 50px; /* Tamaño de las librerías de Python */
         }
 
         .experience {
@@ -235,6 +242,18 @@
             margin-left: 10px;
         }
 
+        .contact {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+        .contact p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #ccd6f6;
+        }
         .contact-icons {
             display: flex;
             justify-content: center;
@@ -367,10 +386,12 @@
                 <div>
                     <h4>Backend</h4>
                     <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-                    <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
-                    <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
-                    <img src="https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white" alt="SciPy">
-                    <img src="https://img.shields.io/badge/GeoPandas-1B1B1B?style=for-the-badge&logo=geopandas&logoColor=white" alt="GeoPandas">
+                    <div class="python-libs">
+                        <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+                        <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+                        <img src="https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white" alt="SciPy">
+                        <img src="https://img.shields.io/badge/GeoPandas-1B1B1B?style=for-the-badge&logo=geopandas&logoColor=white" alt="GeoPandas">
+                    </div>
                 </div>
                 <div>
                     <h4>Frontend</h4>
@@ -398,7 +419,8 @@
         </section>
         <section id="contact" class="contact">
             <h2>Contacto</h2>
-            <p>Mi número de contacto es 3104219762. Mi correo es prietojorge905@gmail.com. Si no eres de Colombia, recuerda marcar al celular con +57 al iniciar el número.</p>
+            <p>📞 Teléfono: +57 310 421 9762</p>
+            <p>📧 Correo: prietojorge905@gmail.com</p>
             <div class="contact-icons">
                 <button onclick="window.location.href='https://www.linkedin.com/in/jorge-prieto-b36ab2250/'">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.25 3H4.75C4.336 3 4 3.336 4 3.75v16.5c0 .414.336.75.75.75h14.5c.414 0 .75-.336.75-.75V3.75c0-.414-.336-.75-.75-.75zM8.09 19.5H5.75v-9h2.34v9zM6.91 8.73c-.747 0-1.35-.603-1.35-1.35s.603-1.35 1.35-1.35 1.35.603 1.35 1.35-.603 1.35-1.35 1.35zM18.25 19.5h-2.34v-4.84c0-2.49-3-2.3-3 0v4.84h-2.34v-9h2.34v1.23c1.014-1.88 5-2.03 5 1.76v6.01z"/></svg>
