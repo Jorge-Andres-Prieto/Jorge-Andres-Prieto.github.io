@@ -23,7 +23,7 @@
             padding: 10px 20px;
             text-align: right;
             position: fixed;
-            width: 100%;
+            width: calc(100% - 20px);
             top: 0;
             z-index: 1000;
         }
@@ -33,7 +33,7 @@
         }
 
         header nav a {
-            margin: 0 20px; /* Aumentar margen para opción Contacto */
+            margin: 0 10px; /* Aumentar margen para opción Contacto */
             color: #ffffff;
             text-decoration: none;
             font-weight: bold;
@@ -46,10 +46,10 @@
 
         main {
             flex: 1;
-            padding: 20px;
+            padding: 0 20px; /* Espacio reducido */
             max-width: 900px;
             margin: 0 auto;
-            padding-top: 100px; /* Espacio adicional para el menú fijo */
+            padding-top: 60px; /* Espacio adicional para el menú fijo */
         }
 
         section h2 {
@@ -129,7 +129,7 @@
 
         .portfolio {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 0; /* Eliminar el margen superior */
         }
 
         .portfolio-grid {
@@ -185,20 +185,6 @@
             width: 100px; /* Tamaño aumentado de los logotipos */
             margin-right: 10px;
             vertical-align: middle;
-        }
-
-        .python-libs {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #233554;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 10px; /* Separar un poco del logo de Python */
-        }
-        .python-libs img {
-            margin: 5px 0;
-            width: 70px; /* Tamaño aumentado de las librerías de Python */
         }
 
         .experience {
@@ -424,8 +410,6 @@
         </section>
         <section id="contact" class="contact">
             <h2>Contacto</h2>
-            <p>📞 Teléfono: +57 310 421 9762</p>
-            <p>📧 Correo: prietojorge905@gmail.com</p>
             <div class="contact-icons">
                 <button onclick="window.location.href='https://www.linkedin.com/in/jorge-prieto-b36ab2250/'">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.25 3H4.75C4.336 3 4 3.336 4 3.75v16.5c0 .414.336.75.75.75h14.5c.414 0 .75-.336.75-.75V3.75c0-.414-.336-.75-.75-.75zM8.09 19.5H5.75v-9h2.34v9zM6.91 8.73c-.747 0-1.35-.603-1.35-1.35s.603-1.35 1.35-1.35 1.35.603 1.35 1.35-.603 1.35-1.35 1.35zM18.25 19.5h-2.34v-4.84c0-2.49-3-2.3-3 0v4.84h-2.34v-9h2.34v1.23c1.014-1.88 5-2.03 5 1.76v6.01z"/></svg>
@@ -436,6 +420,7 @@
                     GitHub
                 </button>
             </div>
+            <p>📞 Teléfono: +57 310 421 9762 📧 Correo: prietojorge905@gmail.com</p>
         </section>
     </main>
     <footer>
