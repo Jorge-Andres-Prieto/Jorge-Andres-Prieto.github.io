@@ -21,7 +21,11 @@
         header {
             background-color: #0a192f;
             padding: 10px 20px;
-            text-align: left;
+            text-align: right; /* Alinea el menú a la derecha */
+        }
+
+        header nav {
+            display: inline-block;
         }
 
         header nav a {
@@ -165,6 +169,26 @@
             display: flex;
             align-items: center;
         }
+        .python-libs {
+            background-color: #233554;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .experience {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .experience h2 {
+            font-size: 1.8em;
+            color: #64ffda;
+        }
+        .experience p {
+            color: #8892b0;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
         .buy-coffee {
             text-align: center;
@@ -251,6 +275,7 @@
         <nav>
             <a href="#profile">Sobre Mí</a>
             <a href="#portfolio">Portafolio</a>
+            <a href="#experience">Experiencia</a>
             <a href="#technologies">Tecnologías</a>
             <a href="#buy-coffee">Buy me a Coffee</a>
             <a href="#contact">Contacto</a>
@@ -267,6 +292,18 @@
                     <button class="download-cv" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1gpD5R1Ivd0jwnfWWdNJY-yWfOD05JWB7'">Descargar CV</button>
                 </div>
             </div>
+        </section>
+        <section id="experience" class="experience">
+            <h2>Experiencia</h2>
+            <p>
+                Desarrollé un sistema para gestionar ventas, inventarios, clientes y usuarios. El sistema cuenta con cuadre de caja, opciones de análisis de ventas, crédito para clientes conocidos tipo fiado, y tiene una opción para marcar la mejor ruta y el orden de entrega para los domicilios. Para este proyecto, utilicé Python y las librerías (Pandas, NumPy, SciPy, GeoPandas y Matplotlib), Streamlit, PostgreSQL, y para desplegar la base de datos utilicé Render.
+            </p>
+            <p>
+                También tengo experiencia en la creación de un chatbot que interpreta el lenguaje natural de forma correcta y acertada, y puede responder cualquier tipo de preguntas específicas para el negocio al que se le integre. Para este proyecto, usé Python, Streamlit y la API de OpenAI para interpretar el lenguaje natural.
+            </p>
+            <p>
+                Si quieren ver estos proyectos, pueden encontrarlos en el portafolio.
+            </p>
         </section>
         <section id="portfolio" class="portfolio">
             <h2>Portafolio</h2>
@@ -309,25 +346,25 @@
             <div class="tech-group">
                 <h4>Backend</h4>
                 <p>
-                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-                    Utilizado para desarrollar la lógica de backend de las aplicaciones, permitiendo manipulación de datos, automatización de tareas y creación de algoritmos complejos. Incluye librerías como NumPy, Pandas, Matplotlib, SciPy y GeoPandas.
+                    <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python" style="width: 100px;">
+                    Utilizado para desarrollar la lógica de backend de las aplicaciones, permitiendo manipulación de datos, automatización de tareas y creación de algoritmos complejos. Incluye librerías como <span class="python-libs">NumPy, Pandas, Matplotlib, SciPy y GeoPandas</span>.
                 </p>
                 <p>
-                    <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" alt="PostgreSQL" style="width: 100px;">
                     Base de datos relacional utilizada para almacenar y gestionar grandes volúmenes de datos.
                 </p>
             </div>
             <div class="tech-group">
                 <h4>Frontend</h4>
                 <p>
-                    <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit">
+                    <img src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png" alt="Streamlit" style="width: 100px;">
                     Framework utilizado para la creación rápida de aplicaciones web interactivas y visualización de datos.
                 </p>
             </div>
             <div class="tech-group">
                 <h4>Inteligencia Artificial</h4>
                 <p>
-                    <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/OpenAI_Logo.svg" alt="OpenAI" style="width: 100px;">
                     API utilizada para integrar capacidades de inteligencia artificial y procesamiento del lenguaje natural en las aplicaciones.
                 </p>
             </div>
