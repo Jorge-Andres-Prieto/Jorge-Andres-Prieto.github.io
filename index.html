@@ -49,7 +49,7 @@
             padding: 0 20px;
             max-width: 900px;
             margin: 0 auto;
-            padding-top: 40px;
+            padding-top: 80px;
         }
 
         section h2 {
@@ -67,12 +67,12 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
-            height: calc(100vh - 120px);
+            height: calc(60vh - 120px);
         }
         .profile img {
             border-radius: 50%;
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             object-fit: cover;
             border: none;
         }
@@ -80,15 +80,15 @@
             text-align: left;
         }
         .profile-info h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             color: #dfe6e9;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         .profile-info h3 {
             font-family: 'Merriweather', serif;
-            font-size: 2em;
+            font-size: 1.5em;
             color: #64ffda;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .profile-info p {
             color: #8892b0;
@@ -193,17 +193,33 @@
             text-align: center;
             margin-bottom: 40px;
         }
+        .experience h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 2em;
+            color: #64ffda;
+            text-align: center;
+            margin-bottom: 20px;
+            padding-top: 80px;
+            margin-top: -60px;
+        }
         .experience .exp-item {
             background-color: #112240;
             border: 1px solid #ddd;
             border-radius: 10px;
-            padding: 15px;
+            padding: 20px;
             margin-bottom: 20px;
             color: #8892b0;
             text-align: left;
             max-width: 800px;
             margin: 0 auto 20px auto;
             line-height: 1.6;
+            display: flex;
+            align-items: center;
+        }
+        .exp-item img {
+            width: 50px;
+            margin-right: 20px;
+            display: block;
         }
         .exp-item p {
             margin: 0 0 10px 0;
@@ -360,17 +376,23 @@
         <section id="experience" class="experience">
             <h2>Experiencia</h2>
             <div class="exp-item">
-                <p>
-                    Desarrollé un sistema integral para gestionar ventas, inventarios, clientes y usuarios. Este sistema incluye funciones como cuadre de caja, opciones de análisis de ventas, crédito para clientes conocidos tipo fiado, y una opción para marcar la mejor ruta y el orden de entrega para los domicilios. Utilicé Python junto con librerías como Pandas, NumPy, SciPy, GeoPandas y Matplotlib. La interfaz fue creada con Streamlit, y la base de datos se gestionó con PostgreSQL, desplegada en Render.
-                </p>
+                <img src="https://img.icons8.com/ios-filled/50/64ffda/system-task.png" alt="Sistema Integral">
+                <div>
+                    <p>
+                        Desarrollé un sistema integral para gestionar ventas, inventarios, clientes y usuarios. Este sistema incluye funciones como cuadre de caja, opciones de análisis de ventas, crédito para clientes conocidos tipo fiado, y una opción para marcar la mejor ruta y el orden de entrega para los domicilios. Utilicé Python junto con librerías como Pandas, NumPy, SciPy, GeoPandas y Matplotlib. La interfaz fue creada con Streamlit, y la base de datos se gestionó con PostgreSQL, desplegada en Render.
+                    </p>
+                </div>
             </div>
             <div class="exp-item">
-                <p>
-                    Creé un chatbot capaz de interpretar el lenguaje natural y responder preguntas específicas relacionadas con un negocio. Este chatbot se diseñó para integrarse en diversas plataformas empresariales, ofreciendo respuestas precisas y útiles. El proyecto se desarrolló usando Python, Streamlit y la API de OpenAI para la interpretación del lenguaje natural.
-                </p>
-                <p>
-                    Si quieren ver estos proyectos, pueden encontrarlos en la sección de Proyectos.
-                </p>
+                <img src="https://img.icons8.com/ios-filled/50/64ffda/chatbot.png" alt="Chatbot">
+                <div>
+                    <p>
+                        Creé un chatbot capaz de interpretar el lenguaje natural y responder preguntas específicas relacionadas con un negocio. Este chatbot se diseñó para integrarse en diversas plataformas empresariales, ofreciendo respuestas precisas y útiles. El proyecto se desarrolló usando Python, Streamlit y la API de OpenAI para la interpretación del lenguaje natural.
+                    </p>
+                    <p>
+                        Si quieren ver estos proyectos, pueden encontrarlos en la sección de Proyectos.
+                    </p>
+                </div>
             </div>
         </section>
         <section id="technologies" class="technologies">
